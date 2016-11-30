@@ -212,8 +212,6 @@ unless chgrps.empty?
   puts(*chgrps)
 end
 
-wait_for_user if STDIN.tty?
-
 if !mac?
   system "/bin/mkdir", "-p", HOMEBREW_PREFIX
 elsif File.directory? HOMEBREW_PREFIX
